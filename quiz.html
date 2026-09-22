@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اكتشف شخصيتك | الاختبار</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">✦</span>
+      <span>اكتشف شخصيتك</span>
+    </a>
+    <button class="menu-toggle" aria-label="فتح القائمة">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">عن الاختبار</a>
+      <a href="quiz.html">الاختبار</a>
+      <a href="result.html">النتيجة</a>
+      <a href="contact.html">فريق المشروع </a>
+    </nav>
+  </div>
+</header>
+
+<main class="quiz-page">
+  <section class="quiz-shell container">
+    <div class="quiz-head">
+      <div>
+        <span class="eyebrow">اختبار الشخصية</span>
+        <h1>اختر الإجابة الأقرب لك</h1>
+        <p>لا توجد إجابة صحيحة أو خاطئة — اختر بعفوية.</p>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-label"><span id="progressText">البيانات الأساسية</span><span id="progressPercent">0%</span></div>
+        <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+      </div>
+    </div>
+
+    <form id="quizForm" class="quiz-form">
+      <section class="name-card quiz-step active">
+        <span class="eyebrow">قبل أن نبدأ</span>
+        <h2>ما الاسم الذي تريدين أن تظهر به نتيجتك؟</h2>
+        <p>سيُستخدم الاسم فقط داخل صفحة النتيجة على هذا الجهاز.</p>
+        <div class="name-field">
+          <label for="userName">الاسم</label>
+          <input id="userName" name="userName" type="text" maxlength="30" autocomplete="name" placeholder="اكتبي اسمك هنا">
+        </div>
+      </section>
+      <section class="question-card quiz-step" data-step="1">
+        <div class="question-number">01</div>
+        <h2>ماذا تفضل في وقت فراغك؟</h2>
+        <div class="answer-grid">
+          <label class="answer-option"><input type="radio" name="q1" value="calm"><span class="choice-icon">🌿</span><span>أقضي الوقت بهدوء وأستمتع بوقتي الخاص</span></label>
+          <label class="answer-option"><input type="radio" name="q1" value="leader"><span class="choice-icon">🔥</span><span>أضع خطة وأنجز أشياء كثيرة</span></label>
+          <label class="answer-option"><input type="radio" name="q1" value="adventure"><span class="choice-icon">🦋</span><span>أذهب إلى مكان جديد وأجرب شيئًا مختلفًا</span></label>
+          <label class="answer-option"><input type="radio" name="q1" value="social"><span class="choice-icon">🌸</span><span>أجتمع مع أصدقائي ونقضي وقتًا ممتعًا</span></label>
+        </div>
+      </section>
+
+      <section class="question-card quiz-step" data-step="2">
+        <div class="question-number">02</div>
+        <h2>عندما تواجه مشكلة مفاجئة، ماذا تفعل؟</h2>
+        <div class="answer-grid">
+          <label class="answer-option"><input type="radio" name="q2" value="calm"><span class="choice-icon">🌿</span><span>أهدأ وأفكر قبل اتخاذ القرار</span></label>
+          <label class="answer-option"><input type="radio" name="q2" value="leader"><span class="choice-icon">🔥</span><span>أتولى الأمر وأبحث عن الحل مباشرة</span></label>
+          <label class="answer-option"><input type="radio" name="q2" value="adventure"><span class="choice-icon">🦋</span><span>أجرب طريقة جديدة وغير تقليدية</span></label>
+          <label class="answer-option"><input type="radio" name="q2" value="social"><span class="choice-icon">🌸</span><span>أستشير شخصًا أثق به</span></label>
+        </div>
+      </section>
+
+      <section class="question-card quiz-step" data-step="3">
+        <div class="question-number">03</div>
+        <h2>أين تفضل قضاء الإجازة؟</h2>
+        <div class="answer-grid">
+          <label class="answer-option"><input type="radio" name="q3" value="calm"><span class="choice-icon">🌿</span><span>مكان هادئ وطبيعي</span></label>
+          <label class="answer-option"><input type="radio" name="q3" value="leader"><span class="choice-icon">🔥</span><span>مكان مليء بالأنشطة والتحديات</span></label>
+          <label class="answer-option"><input type="radio" name="q3" value="adventure"><span class="choice-icon">🦋</span><span>مكان جديد لم أزره من قبل</span></label>
+          <label class="answer-option"><input type="radio" name="q3" value="social"><span class="choice-icon">🌸</span><span>مكان ممتع مع مجموعة من الأشخاص</span></label>
+        </div>
+      </section>
+
+      <section class="question-card quiz-step" data-step="4">
+        <div class="question-number">04</div>
+        <h2>كيف تتصرف في مشروع جماعي؟</h2>
+        <div class="answer-grid">
+          <label class="answer-option"><input type="radio" name="q4" value="calm"><span class="choice-icon">🌿</span><span>أساعد في تنظيم العمل بهدوء</span></label>
+          <label class="answer-option"><input type="radio" name="q4" value="leader"><span class="choice-icon">🔥</span><span>أتولى القيادة وتوزيع المهام</span></label>
+          <label class="answer-option"><input type="radio" name="q4" value="adventure"><span class="choice-icon">🦋</span><span>أقترح أفكارًا جديدة ومختلفة</span></label>
+          <label class="answer-option"><input type="radio" name="q4" value="social"><span class="choice-icon">🌸</span><span>أحرص على أن يعمل الجميع معًا</span></label>
+        </div>
+      </section>
+
+      <section class="question-card quiz-step" data-step="5">
+        <div class="question-number">05</div>
+        <h2>ما أكثر شيء يجذبك؟</h2>
+        <div class="answer-grid">
+          <label class="answer-option"><input type="radio" name="q5" value="calm"><span class="choice-icon">🌿</span><span>الهدوء والاستقرار</span></label>
+          <label class="answer-option"><input type="radio" name="q5" value="leader"><span class="choice-icon">🔥</span><span>النجاح والإنجاز</span></label>
+          <label class="answer-option"><input type="radio" name="q5" value="adventure"><span class="choice-icon">🦋</span><span>المغامرة والتجارب الجديدة</span></label>
+          <label class="answer-option"><input type="radio" name="q5" value="social"><span class="choice-icon">🌸</span><span>العلاقات والمرح</span></label>
+        </div>
+      </section>
+
+      <section class="question-card quiz-step" data-step="6">
+        <div class="question-number">06</div>
+        <h2>لو أتيحت لك فرصة تجربة شيء جديد تمامًا؟</h2>
+        <div class="answer-grid">
+          <label class="answer-option"><input type="radio" name="q6" value="calm"><span class="choice-icon">🌿</span><span>أفكر فيها جيدًا أولًا</span></label>
+          <label class="answer-option"><input type="radio" name="q6" value="leader"><span class="choice-icon">🔥</span><span>أبدأ فورًا وأرى ماذا يحدث</span></label>
+          <label class="answer-option"><input type="radio" name="q6" value="adventure"><span class="choice-icon">🦋</span><span>بالتأكيد! أحب تجربة الأشياء الجديدة</span></label>
+          <label class="answer-option"><input type="radio" name="q6" value="social"><span class="choice-icon">🌸</span><span>أجربها مع شخص أحبه</span></label>
+        </div>
+      </section>
+
+      <div id="quizError" class="quiz-error"></div>
+      <div class="quiz-nav">
+        <button type="button" id="prevBtn" class="btn btn-ghost" disabled>السابق</button>
+        <button type="button" id="nextBtn" class="btn btn-primary">التالي</button>
+        <button type="submit" id="submitBtn" class="btn btn-primary hidden">عرض النتيجة</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 اكتشف شخصيتك — مشروع ترفيهي تعليمي</p>
+    <span>تجربة ويب تفاعلية</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
